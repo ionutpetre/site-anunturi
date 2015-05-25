@@ -1,2 +1,2 @@
 # site-anunturi
-Site anunturi creat cu AngularJS si Node.js
+Site de anunturi creat cu AngularJS si Node.js
