@@ -1,0 +1,103 @@
+body {
+    margin: 0 auto;
+    background: gray;
+    width: 870px;
+}
+
+#creare {
+    background: white;
+    padding: 15px;
+    height: 310px;
+    border-radius: 5px;
+    display: none;
+}
+
+#modificare {
+    background: white;
+    padding: 15px;
+    height: 350px;
+    border-radius: 5px;
+    display: none;
+}
+
+#stergere {
+    background: white;
+    padding: 15px;
+    height: 210px;
+    border-radius: 5px;
+    display: none;
+}
+
+#afisare {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #E7E7E5;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0px;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #663300;
+    transform: rotate(-90deg);
+}
+
+p {
+    font-size: 16px;
+}
+
+#opt1 {
+    padding-left: 30px;
+    padding-right: 15px;
+    
+  
+}
+
+#opt1 h2, #opt2 h2, #opt3 h2 {
+    font-size: 16px;
+    text-shadow: -1px 0 #B8B8B8, 0 1px #B8B8B8, 1px 0 #B8B8B8, 0 -1px #B8B8B8;
+}
+
+#opt2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#opt3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#descriere-anunt{
+    border: 1px solid gray;
+    width: 680px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+}
+
+#descriere-anunt p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

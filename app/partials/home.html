@@ -1,0 +1,96 @@
+<script type="text/javascript" src="js/script.js"></script>
+
+<div ng-controller="anunturiController">
+    <a href="#" id="opt1"><h2>Creare &dArr;</h2></a>
+    <div id="creare">
+        <h3>Creare categorie:</h3>
+        <form>
+            <input type="text" ng-model="categorie.nume">
+            <input type="button" value="Creaza categorie" ng-click="creareCategorie(categorie)">
+        </form>
+        <br> 
+        <hr>
+        <h3>Creare anunt:</h3>
+        <form>
+            Id categorie:
+            <input type="number" ng-model="anunt.categorieId"> 
+            Autor:
+            <input type="text" ng-model="anunt.autor">
+            Denumire:
+            <input type="text" ng-model="anunt.nume">
+            <br> Descriere:
+            <br>
+            <textarea rows="5" cols="101" ng-model="anunt.descriere"></textarea>
+            <br>
+            <input style="float:right" type="button" value="Creaza anunt" ng-click="creareAnunt(anunt)">
+        </form>
+    </div>
+    
+    <a href="#" id="opt2"><h2>Modificare &dArr;</h2></a>
+    <div id="modificare">
+        <h3>Modificare categorie:</h3>
+        <form>
+            Id categorie
+            <input type="number" ng-model="categorie.id">
+            Denumire:
+            <input type="text" ng-model="categorie.nume">
+            <input type="button" value="Modifica categorie" ng-click="modificareCategorie(categorie.id, categorie.nume)">
+        </form>
+        <br>
+        <hr>
+        <h3>Modificare anunt:</h3>
+        <form>
+            Id anunt:&nbsp;&nbsp;&nbsp;
+            <input type="number" ng-model="anunt.id"> 
+            Id categorie:
+            <input type="number" ng-model="anunt.categorieId"> 
+            Autor:
+            <input type="text" ng-model="anunt.autor"><br> <br> 
+            Denumire:
+            <input type="text" ng-model="anunt.nume">
+            
+            <br> Descriere:
+            <br>
+            <textarea rows="5" cols="101" ng-model="anunt.descriere"></textarea>
+            <br>
+            <input style="float:right" type="button" value="Modifica anunt" ng-click="modificareAnunt(anunt.id, anunt.nume, anunt.autor, anunt.descriere, anunt.categorieId)">
+        </form>
+    </div>
+
+    <a href="#" id="opt3"><h2>Stergere &dArr;</h2></a>
+     <div id="stergere">
+        <h3>Stergere categorie:</h3>
+        <form>
+            Id categorie:
+            <input type="number" ng-model="categorie.id">
+            <input type="button" value="Sterge categorie" ng-click="stergereCategorie(categorie.id)">
+        </form>
+        <br>
+        <hr>
+        <h3>Stergere anunt:</h3>
+        <form>
+            Id anunt:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" ng-model="anunt.id">
+            <input type="button" value="Sterge anunt" ng-click="stergereAnunt(anunt.id)">
+        </form>
+        <form>
+    </div>
+
+    <div id="afisare">
+        <div data-ng-init="afisareCategorii()" >
+        <ul>
+            <li ng-repeat="categorie in categorii">
+                <p>Categorie id {{categorie.id}}  &raquo; <b>{{categorie.nume}}</b></p>
+                <ul data-ng-init="afisareAnunturi()">
+                    <li ng-repeat="anunt in anunturi" ng-if="anunt.categorieId==categorie.id">
+                       <p>Anunt id {{anunt.id}} &raquo; <b>{{anunt.nume}}</b> postat de {{anunt.autor}} la {{anunt.createdAt}}</p>
+                       <div id="descriere-anunt">
+                            <p>{{anunt.descriere}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>

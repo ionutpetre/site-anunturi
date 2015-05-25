@@ -1,0 +1,13 @@
+{
+  "name": "proiect-tw",
+  "version": "0.0.1",
+  "description": "Proiect tehnologii web",
+  "author": "Geo Balan",
+  "dependencies": {
+    "express": "*",
+    "body-parser":"*",
+    "cors":"*",
+    "sequelize":"*",
+    "mysql":"*"
+  }
+}
