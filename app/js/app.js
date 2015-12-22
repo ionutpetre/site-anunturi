@@ -5,7 +5,7 @@ angular
 function appConfig($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: '/anunturi',
-        templateUrl: 'views/home.html',
+        templateUrl: 'partials/home.html',
         controller: 'anunturiController'
     });
     $urlRouterProvider.otherwise('/anunturi');
