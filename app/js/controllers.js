@@ -1,6 +1,10 @@
-var app = angular.module("anunturiControllers", ["ui.router"]);
+angular
+    .module('anunturiApp')
+    .controller('anunturiController', anunturiController);
 
-app.controller("anunturiController", function($scope, $http, $state) {
+anunturiController.$inject = ['$scope', '$state', '$http'];
+
+function anunturiController($scope, $state, $http) {
     $scope.creareCategorie = function(categorie) {
         $http.post("/categorie", categorie)
             .success(function() {
@@ -92,4 +96,4 @@ app.controller("anunturiController", function($scope, $http, $state) {
             })
             .error(function() {})
     }
-});
+}
